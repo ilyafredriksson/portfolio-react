@@ -7,10 +7,11 @@ import Projects from './components/Projects';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import './App.css';
 
-const App = () => {
+function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+    <div className="app">
       <Navbar />
       <Hero />
       <About />
@@ -21,6 +22,6 @@ const App = () => {
       <Footer />
     </div>
   );
-};
+}
 
 export default App;
