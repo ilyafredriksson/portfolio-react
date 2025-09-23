@@ -1,23 +1,26 @@
 import React from 'react';
-import { skillsData } from '../data/skillsData';
+import { skills } from '../data/skillsData';
 
-const Skills = () => (
-  <section id="skills">
-    <h2 className="section-title">Teknisk Kompetens</h2>
-    <div className="skills-grid">
-      {skillsData.map((group, index) => {
-        const Icon = group.icon;
-        return (
-          <div className="skill-card" key={index}>
-            <div className="skill-title"><Icon size={20} /> {group.category}</div>
-            <div className="skill-badges">
-              {group.items.map((item, i) => <span key={i}>{item}</span>)}
+const Skills = () => {
+  return (
+    <section id="skills" className="skills-section">
+      <div className="skills-container">
+        <h2>Teknisk kompetens</h2>
+        <div className="skills-grid">
+          {skills.map((group, index) => (
+            <div className="skill-card" key={index}>
+              <h3>{group.category}</h3>
+              <ul>
+                {group.items.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
             </div>
-          </div>
-        );
-      })}
-    </div>
-  </section>
-);
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Skills;

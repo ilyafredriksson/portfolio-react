@@ -1,9 +1,11 @@
 import React from 'react';
 
-const Footer = () => (
-  <footer>
-    © 2024 Ilya Fredriksson. Skapad med React och passion för webbutveckling.
-  </footer>
-);
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <p>© 2024 Ilya Fredriksson. Skapad med React och passion för webbutveckling.</p>
+    </footer>
+  );
+};
 
 export default Footer;

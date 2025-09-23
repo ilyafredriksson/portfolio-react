@@ -1,27 +1,23 @@
 import React from 'react';
 
-const About = () => (
-  <section id="about">
-    <h2 className="section-title">Om mig</h2>
-    <div className="about-container">
-      <div className="about-text">
-        <p>Jag är en ambitiös och lösningsorienterad frontend/fullstack-utvecklare...</p>
-        <p>Jag söker nu en LIA-plats där jag kan omsätta mina kunskaper i praktiken...</p>
+const About = () => {
+  return (
+    <section id="about" className="about-section">
+      <div className="about-container">
+        <h2>Om mig</h2>
+        <p>
+          Jag är en ambitiös och lösningsorienterad frontend/fullstack-utvecklare med passion för modern 
+          webbutveckling och säkerhet. Min styrka ligger i att kombinera ett användarcentrerat tänk för 
+          att skapa snabba, responsiva och tillgängliga webbapplikationer.
+        </p>
+        <p>
+          Jag söker nu en LIA-plats där jag kan omsätta mina kunskaper i praktiken och bidra till 
+          innovativa projekt. Jag är van att arbeta i agila team, tar egna initiativ och älskar att 
+          lära mig nya teknologier.
+        </p>
       </div>
-      <div className="about-card">
-        <h3>LIA-plats sökes</h3>
-        <strong>Period:</strong>
-        <p>2025-11-17 - 2026-05-01</p>
-        <strong>Fokusområden:</strong>
-        <ul>
-          <li>Frontend med ReactJS</li>
-          <li>Backend med Node.js</li>
-          <li>API-hantering och autentisering</li>
-          <li>Webbsäkerhet</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default About;
