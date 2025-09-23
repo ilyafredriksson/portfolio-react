@@ -1,22 +1,32 @@
 import React from 'react';
 
-const Education = () => {
-  return (
-    <section id="education" className="py-20 px-4 bg-black/20">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-          Utbildning
-        </h2>
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-          <h3 className="text-2xl font-bold mb-2 text-white">EC Utbildning – Webbutvecklare inom IT-säkerhet</h3>
-          <p className="text-gray-300 mb-2">2024 – 2026</p>
-          <p className="text-gray-400">
-            YH-utbildning med fokus på säker webbutveckling, moderna ramverk, backend-teknologier och DevOps-principer.
-          </p>
-        </div>
+const Contact = () => (
+  <section id="contact" className="contact">
+    <h2 className="section-title">Kontakt</h2>
+    <p>Redo att diskutera LIA-möjligheter och hur jag kan bidra till ert team!</p>
+    <div className="contact-grid">
+      <div className="contact-card">
+        <strong>Email:</strong>
+        <p>fredrikssonilya@gmail.com</p>
       </div>
-    </section>
-  );
-};
+      <div className="contact-card">
+        <strong>Telefon:</strong>
+        <p>0727151053</p>
+      </div>
+      <div className="contact-card">
+        <strong>LinkedIn:</strong>
+        <p><a href="https://www.linkedin.com/in/ilya-fredriksson-197313353/">Profil</a></p>
+      </div>
+      <div className="contact-card">
+        <strong>GitHub:</strong>
+        <p><a href="https://github.com/ilyafredriksson">Projekt</a></p>
+      </div>
+    </div>
+    <div className="contact-call">
+      <h3>Låt oss skapa något fantastiskt tillsammans!</h3>
+      <p>Kontakta mig gärna för en intervju!</p>
+    </div>
+  </section>
+);
 
-export default Education;
+export default Contact;
