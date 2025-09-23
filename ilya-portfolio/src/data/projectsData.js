@@ -1,4 +1,4 @@
-export const projects = [
+export const projectsData = [
   {
     title: 'QR Code Generator & Scanner',
     description: 'Fullstack React-applikation för att generera och skanna QR-koder med historikfunktion och säker datahantering.',
