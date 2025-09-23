@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-function Navbar() {
+const Navbar = ({ activeSection, scrollToSection }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const menuItems = [
+
+  const links = [
     { id: 'hero', label: 'Hem' },
     { id: 'about', label: 'Om mig' },
     { id: 'skills', label: 'Kompetens' },
@@ -11,29 +12,25 @@ function Navbar() {
     { id: 'contact', label: 'Kontakt' }
   ];
 
-  const scrollToSection = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-    setIsOpen(false);
-  };
-
   return (
     <nav className="navbar">
       <div className="nav-logo">Ilya Fredriksson</div>
       <div className={`nav-links ${isOpen ? 'open' : ''}`}>
-        {menuItems.map(item => (
-          <button key={item.id} onClick={() => scrollToSection(item.id)}>
-            {item.label}
+        {links.map((link) => (
+          <button
+            key={link.id}
+            onClick={() => { scrollToSection(link.id); setIsOpen(false); }}
+            className={activeSection === link.id ? 'active' : ''}
+          >
+            {link.label}
           </button>
         ))}
       </div>
-      <div
-        className="nav-toggle"
-        onClick={() => setIsOpen(!isOpen)}
-      >
+      <div className="nav-toggle" onClick={() => setIsOpen(!isOpen)}>
         ☰
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;
